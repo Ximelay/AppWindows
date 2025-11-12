@@ -56,9 +56,11 @@
             this.director_FIO_OrganizationTextBox = new System.Windows.Forms.TextBox();
             this.number_Phone_OrganizationTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSaveOrg = new System.Windows.Forms.Button();
-            this.btnChangeOrg = new System.Windows.Forms.Button();
-            this.btnDeleteOrg = new System.Windows.Forms.Button();
+            this.backMainForm = new System.Windows.Forms.Button();
+            this.addEducationOrgBtn = new System.Windows.Forms.Button();
+            this.editEducationOrgBtn = new System.Windows.Forms.Button();
+            this.removeEducationOrgBtn = new System.Windows.Forms.Button();
+            this.allEducationOrgBtn = new System.Windows.Forms.Button();
             name_OrganisationLabel = new System.Windows.Forms.Label();
             email_OrganisationLabel = new System.Windows.Forms.Label();
             director_FIO_OrganizationLabel = new System.Windows.Forms.Label();
@@ -72,36 +74,40 @@
             // name_OrganisationLabel
             // 
             name_OrganisationLabel.AutoSize = true;
-            name_OrganisationLabel.Location = new System.Drawing.Point(262, 123);
+            name_OrganisationLabel.Location = new System.Drawing.Point(142, 95);
+            name_OrganisationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             name_OrganisationLabel.Name = "name_OrganisationLabel";
-            name_OrganisationLabel.Size = new System.Drawing.Size(106, 16);
+            name_OrganisationLabel.Size = new System.Drawing.Size(83, 13);
             name_OrganisationLabel.TabIndex = 1;
             name_OrganisationLabel.Text = "Наименование";
             // 
             // email_OrganisationLabel
             // 
             email_OrganisationLabel.AutoSize = true;
-            email_OrganisationLabel.Location = new System.Drawing.Point(320, 162);
+            email_OrganisationLabel.Location = new System.Drawing.Point(186, 127);
+            email_OrganisationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             email_OrganisationLabel.Name = "email_OrganisationLabel";
-            email_OrganisationLabel.Size = new System.Drawing.Size(48, 16);
+            email_OrganisationLabel.Size = new System.Drawing.Size(37, 13);
             email_OrganisationLabel.TabIndex = 3;
             email_OrganisationLabel.Text = "Почта";
             // 
             // director_FIO_OrganizationLabel
             // 
             director_FIO_OrganizationLabel.AutoSize = true;
-            director_FIO_OrganizationLabel.Location = new System.Drawing.Point(257, 206);
+            director_FIO_OrganizationLabel.Location = new System.Drawing.Point(139, 162);
+            director_FIO_OrganizationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             director_FIO_OrganizationLabel.Name = "director_FIO_OrganizationLabel";
-            director_FIO_OrganizationLabel.Size = new System.Drawing.Size(111, 16);
+            director_FIO_OrganizationLabel.Size = new System.Drawing.Size(90, 13);
             director_FIO_OrganizationLabel.TabIndex = 5;
             director_FIO_OrganizationLabel.Text = "ФИО директора";
             // 
             // number_Phone_OrganizationLabel
             // 
             number_Phone_OrganizationLabel.AutoSize = true;
-            number_Phone_OrganizationLabel.Location = new System.Drawing.Point(249, 248);
+            number_Phone_OrganizationLabel.Location = new System.Drawing.Point(133, 197);
+            number_Phone_OrganizationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             number_Phone_OrganizationLabel.Name = "number_Phone_OrganizationLabel";
-            number_Phone_OrganizationLabel.Size = new System.Drawing.Size(119, 16);
+            number_Phone_OrganizationLabel.Size = new System.Drawing.Size(93, 13);
             number_Phone_OrganizationLabel.TabIndex = 7;
             number_Phone_OrganizationLabel.Text = "Номер телефона";
             // 
@@ -155,7 +161,7 @@
             this.educational_OrganisationsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.educational_OrganisationsBindingNavigator.Name = "educational_OrganisationsBindingNavigator";
             this.educational_OrganisationsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.educational_OrganisationsBindingNavigator.Size = new System.Drawing.Size(800, 31);
+            this.educational_OrganisationsBindingNavigator.Size = new System.Drawing.Size(600, 27);
             this.educational_OrganisationsBindingNavigator.TabIndex = 0;
             this.educational_OrganisationsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -165,13 +171,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -181,7 +187,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -190,7 +196,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -199,13 +205,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -213,14 +219,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -228,7 +234,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -237,99 +243,129 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // educational_OrganisationsBindingNavigatorSaveItem
             // 
             this.educational_OrganisationsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.educational_OrganisationsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("educational_OrganisationsBindingNavigatorSaveItem.Image")));
             this.educational_OrganisationsBindingNavigatorSaveItem.Name = "educational_OrganisationsBindingNavigatorSaveItem";
-            this.educational_OrganisationsBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
+            this.educational_OrganisationsBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.educational_OrganisationsBindingNavigatorSaveItem.Text = "Save Data";
             this.educational_OrganisationsBindingNavigatorSaveItem.Click += new System.EventHandler(this.educational_OrganisationsBindingNavigatorSaveItem_Click);
             // 
             // name_OrganisationTextBox
             // 
             this.name_OrganisationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.educational_OrganisationsBindingSource, "Name_Organisation", true));
-            this.name_OrganisationTextBox.Location = new System.Drawing.Point(374, 117);
+            this.name_OrganisationTextBox.Location = new System.Drawing.Point(226, 90);
+            this.name_OrganisationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.name_OrganisationTextBox.Name = "name_OrganisationTextBox";
-            this.name_OrganisationTextBox.Size = new System.Drawing.Size(264, 22);
+            this.name_OrganisationTextBox.Size = new System.Drawing.Size(262, 20);
             this.name_OrganisationTextBox.TabIndex = 2;
             // 
             // email_OrganisationTextBox
             // 
             this.email_OrganisationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.educational_OrganisationsBindingSource, "Email_Organisation", true));
-            this.email_OrganisationTextBox.Location = new System.Drawing.Point(374, 156);
+            this.email_OrganisationTextBox.Location = new System.Drawing.Point(226, 122);
+            this.email_OrganisationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.email_OrganisationTextBox.Name = "email_OrganisationTextBox";
-            this.email_OrganisationTextBox.Size = new System.Drawing.Size(264, 22);
+            this.email_OrganisationTextBox.Size = new System.Drawing.Size(262, 20);
             this.email_OrganisationTextBox.TabIndex = 4;
             // 
             // director_FIO_OrganizationTextBox
             // 
             this.director_FIO_OrganizationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.educational_OrganisationsBindingSource, "Director_FIO_Organization", true));
-            this.director_FIO_OrganizationTextBox.Location = new System.Drawing.Point(374, 200);
+            this.director_FIO_OrganizationTextBox.Location = new System.Drawing.Point(226, 157);
+            this.director_FIO_OrganizationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.director_FIO_OrganizationTextBox.Name = "director_FIO_OrganizationTextBox";
-            this.director_FIO_OrganizationTextBox.Size = new System.Drawing.Size(264, 22);
+            this.director_FIO_OrganizationTextBox.Size = new System.Drawing.Size(262, 20);
             this.director_FIO_OrganizationTextBox.TabIndex = 6;
             // 
             // number_Phone_OrganizationTextBox
             // 
             this.number_Phone_OrganizationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.educational_OrganisationsBindingSource, "Number_Phone_Organization", true));
-            this.number_Phone_OrganizationTextBox.Location = new System.Drawing.Point(374, 242);
+            this.number_Phone_OrganizationTextBox.Location = new System.Drawing.Point(226, 192);
+            this.number_Phone_OrganizationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.number_Phone_OrganizationTextBox.Name = "number_Phone_OrganizationTextBox";
-            this.number_Phone_OrganizationTextBox.Size = new System.Drawing.Size(264, 22);
+            this.number_Phone_OrganizationTextBox.Size = new System.Drawing.Size(262, 20);
             this.number_Phone_OrganizationTextBox.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(341, 56);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(241, 45);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Данные организации";
             // 
-            // btnSaveOrg
+            // backMainForm
             // 
-            this.btnSaveOrg.Location = new System.Drawing.Point(493, 333);
-            this.btnSaveOrg.Name = "btnSaveOrg";
-            this.btnSaveOrg.Size = new System.Drawing.Size(111, 23);
-            this.btnSaveOrg.TabIndex = 10;
-            this.btnSaveOrg.Text = "Сохранить";
-            this.btnSaveOrg.UseVisualStyleBackColor = true;
+            this.backMainForm.Location = new System.Drawing.Point(136, 269);
+            this.backMainForm.Name = "backMainForm";
+            this.backMainForm.Size = new System.Drawing.Size(75, 23);
+            this.backMainForm.TabIndex = 13;
+            this.backMainForm.Text = "Назад";
+            this.backMainForm.UseVisualStyleBackColor = true;
+            this.backMainForm.Click += new System.EventHandler(this.backMainForm_Click);
             // 
-            // btnChangeOrg
+            // addEducationOrgBtn
             // 
-            this.btnChangeOrg.Location = new System.Drawing.Point(376, 333);
-            this.btnChangeOrg.Name = "btnChangeOrg";
-            this.btnChangeOrg.Size = new System.Drawing.Size(111, 23);
-            this.btnChangeOrg.TabIndex = 11;
-            this.btnChangeOrg.Text = "Изменить";
-            this.btnChangeOrg.UseVisualStyleBackColor = true;
+            this.addEducationOrgBtn.BackColor = System.Drawing.Color.LightGreen;
+            this.addEducationOrgBtn.Location = new System.Drawing.Point(255, 269);
+            this.addEducationOrgBtn.Name = "addEducationOrgBtn";
+            this.addEducationOrgBtn.Size = new System.Drawing.Size(75, 23);
+            this.addEducationOrgBtn.TabIndex = 14;
+            this.addEducationOrgBtn.Text = "Создать";
+            this.addEducationOrgBtn.UseVisualStyleBackColor = false;
             // 
-            // btnDeleteOrg
+            // editEducationOrgBtn
             // 
-            this.btnDeleteOrg.Location = new System.Drawing.Point(257, 333);
-            this.btnDeleteOrg.Name = "btnDeleteOrg";
-            this.btnDeleteOrg.Size = new System.Drawing.Size(111, 23);
-            this.btnDeleteOrg.TabIndex = 12;
-            this.btnDeleteOrg.Text = "Удалить";
-            this.btnDeleteOrg.UseVisualStyleBackColor = true;
+            this.editEducationOrgBtn.BackColor = System.Drawing.Color.LightSalmon;
+            this.editEducationOrgBtn.Location = new System.Drawing.Point(336, 269);
+            this.editEducationOrgBtn.Name = "editEducationOrgBtn";
+            this.editEducationOrgBtn.Size = new System.Drawing.Size(75, 23);
+            this.editEducationOrgBtn.TabIndex = 15;
+            this.editEducationOrgBtn.Text = "Изменить";
+            this.editEducationOrgBtn.UseVisualStyleBackColor = false;
+            // 
+            // removeEducationOrgBtn
+            // 
+            this.removeEducationOrgBtn.BackColor = System.Drawing.Color.Red;
+            this.removeEducationOrgBtn.Location = new System.Drawing.Point(417, 269);
+            this.removeEducationOrgBtn.Name = "removeEducationOrgBtn";
+            this.removeEducationOrgBtn.Size = new System.Drawing.Size(75, 23);
+            this.removeEducationOrgBtn.TabIndex = 16;
+            this.removeEducationOrgBtn.Text = "Удалить";
+            this.removeEducationOrgBtn.UseVisualStyleBackColor = false;
+            // 
+            // allEducationOrgBtn
+            // 
+            this.allEducationOrgBtn.Location = new System.Drawing.Point(51, 315);
+            this.allEducationOrgBtn.Name = "allEducationOrgBtn";
+            this.allEducationOrgBtn.Size = new System.Drawing.Size(75, 23);
+            this.allEducationOrgBtn.TabIndex = 17;
+            this.allEducationOrgBtn.Text = "Все ОУ";
+            this.allEducationOrgBtn.UseVisualStyleBackColor = true;
             // 
             // EducationOrgForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnDeleteOrg);
-            this.Controls.Add(this.btnChangeOrg);
-            this.Controls.Add(this.btnSaveOrg);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.allEducationOrgBtn);
+            this.Controls.Add(this.removeEducationOrgBtn);
+            this.Controls.Add(this.editEducationOrgBtn);
+            this.Controls.Add(this.addEducationOrgBtn);
+            this.Controls.Add(this.backMainForm);
             this.Controls.Add(this.label1);
             this.Controls.Add(number_Phone_OrganizationLabel);
             this.Controls.Add(this.number_Phone_OrganizationTextBox);
@@ -340,6 +376,7 @@
             this.Controls.Add(name_OrganisationLabel);
             this.Controls.Add(this.name_OrganisationTextBox);
             this.Controls.Add(this.educational_OrganisationsBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EducationOrgForm";
             this.Text = "EducationOrgForm";
             this.Load += new System.EventHandler(this.EducationOrgForm_Load);
@@ -377,8 +414,10 @@
         private System.Windows.Forms.TextBox director_FIO_OrganizationTextBox;
         private System.Windows.Forms.TextBox number_Phone_OrganizationTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSaveOrg;
-        private System.Windows.Forms.Button btnChangeOrg;
-        private System.Windows.Forms.Button btnDeleteOrg;
+        private System.Windows.Forms.Button backMainForm;
+        private System.Windows.Forms.Button addEducationOrgBtn;
+        private System.Windows.Forms.Button editEducationOrgBtn;
+        private System.Windows.Forms.Button removeEducationOrgBtn;
+        private System.Windows.Forms.Button allEducationOrgBtn;
     }
 }

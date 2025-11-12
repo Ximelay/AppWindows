@@ -12,9 +12,11 @@ namespace AppWindows
 {
     public partial class EducationOrgForm : Form
     {
-        public EducationOrgForm()
+        private MainForm mainForm;
+        public EducationOrgForm(MainForm mainForm)
         {
             InitializeComponent();
+            this.mainForm = mainForm;
         }
 
         private void educational_OrganisationsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -30,6 +32,13 @@ namespace AppWindows
             // TODO: This line of code loads data into the 'lazutkinDataSet.Educational_Organisations' table. You can move, or remove it, as needed.
             this.educational_OrganisationsTableAdapter.Fill(this.lazutkinDataSet.Educational_Organisations);
 
+        }
+
+        private void backMainForm_Click(object sender, EventArgs e)
+        {
+            mainForm.Show();
+            mainForm.Focus();
+            this.Close();
         }
     }
 }

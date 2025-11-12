@@ -32,5 +32,13 @@ namespace AppWindows
             rykovoditelForm.Focus();
             this.Hide();
         }
+
+        private void educationOrgIntoBtn_Click(object sender, EventArgs e)
+        {
+            EducationOrgForm educationOrgForm = new EducationOrgForm(this);
+            educationOrgForm.Show();
+            educationOrgForm.Focus();
+            this.Hide();
+        }
     }
 }
