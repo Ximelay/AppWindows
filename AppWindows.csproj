@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllEducationOrganizations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllEducationOrganizations.Designer.cs">
+      <DependentUpon>AllEducationOrganizations.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AllEmployees.Designer.cs">
       <DependentUpon>AllEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllNominations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllNominations.Designer.cs">
+      <DependentUpon>AllNominations.cs</DependentUpon>
     </Compile>
     <Compile Include="AllRykovoditels.cs">
       <SubType>Form</SubType>
@@ -96,8 +108,14 @@
     <Compile Include="RykovoditelForm.Designer.cs">
       <DependentUpon>RykovoditelForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AllEducationOrganizations.resx">
+      <DependentUpon>AllEducationOrganizations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllEmployees.resx">
       <DependentUpon>AllEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllNominations.resx">
+      <DependentUpon>AllNominations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllRykovoditels.resx">
       <DependentUpon>AllRykovoditels.cs</DependentUpon>

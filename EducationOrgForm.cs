@@ -40,5 +40,113 @@ namespace AppWindows
             mainForm.Focus();
             this.Close();
         }
+
+        private void allEducationOrgBtn_Click(object sender, EventArgs e)
+        {
+            AllEducationOrganizations allEducationOrganizations = new AllEducationOrganizations(this);
+            allEducationOrganizations.Show();
+            allEducationOrganizations.Focus();
+            this.Hide();
+        }
+
+        private void addEducationOrgBtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Создать запись?", "Предупреждение", 
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    educational_OrganisationsBindingSource.AddNew();
+                    MessageBox.Show("Введите данные новой записи и нажмите 'Сохранить'", "Информация");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка: " + ex.Message);
+                }
+            }
+        }
+
+        private void editEducationOrgBtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Изменить текущую запись?", "Предупреждение", 
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    this.Validate();
+                    educational_OrganisationsBindingSource.EndEdit();
+                    tableAdapterManager.UpdateAll(this.lazutkinDataSet);
+
+                    MessageBox.Show("Изменения сохранены!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка: " + ex.Message);
+                }
+            }
+        }
+
+        private void removeEducationOrgBtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Удалить текущую запись?", "Предупреждение",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    this.Validate();
+                    educational_OrganisationsBindingSource.RemoveCurrent();
+                    tableAdapterManager.UpdateAll(this.lazutkinDataSet);
+                    MessageBox.Show("Данные успешно удалены!", "Информация");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка: " + ex.Message);
+                }
+            }
+        }
+
+        private void previousBtn_Click(object sender, EventArgs e)
+        {
+            if (educational_OrganisationsBindingSource.Position > 0)
+            {
+                educational_OrganisationsBindingSource.MovePrevious();
+            }
+            else
+            {
+                MessageBox.Show("Это первая запись!", "Информация");
+            }
+        }
+
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            if (educational_OrganisationsBindingSource.Position + 1 < educational_OrganisationsBindingSource.Count)
+            {
+                educational_OrganisationsBindingSource.MoveNext();
+            }
+            else
+            {
+                MessageBox.Show("Это последняя запись!", "Информация");
+            }
+        }
+
+        private void saveEducOrgBtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Сохранить все изменения?", "Предупреждение", 
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    this.Validate();
+                    educational_OrganisationsBindingSource.EndEdit();
+                    tableAdapterManager.UpdateAll(this.lazutkinDataSet);
+                    MessageBox.Show("Данные успешно сохранены!", "Информация");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка: " + ex.Message);
+                }
+            }
+        }
     }
 }

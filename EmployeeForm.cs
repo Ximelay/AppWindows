@@ -56,7 +56,19 @@ namespace AppWindows
 
         private void addEmployeeBtn_Click(object sender, EventArgs e)
         {
-            employesBindingSource.AddNew();
+            if (MessageBox.Show("Создать новую запись?", "Предупреждение", 
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    employesBindingSource.AddNew();
+                    MessageBox.Show("Введите данные для новой записи и нажмите 'Сохранить'", "Предупреждение");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка: " + ex.Message);
+                }
+            }
         }
 
         private void removeEmployeeBtn_Click(object sender, EventArgs e)
@@ -66,7 +78,10 @@ namespace AppWindows
             {
                 try
                 {
+                    this.Validate();
                     employesBindingSource.RemoveCurrent();
+                    tableAdapterManager.UpdateAll(this.lazutkinDataSet);
+                    MessageBox.Show("Запись успешно удалена!", "Информация");
                 }
                 catch (Exception ex)
                 {
@@ -77,16 +92,66 @@ namespace AppWindows
 
         private void editEmployeeBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Изменить текущую запись?", "Предупреждение", 
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                this.Validate();
-                employesBindingSource.EndEdit();
-                tableAdapterManager.UpdateAll(this.lazutkinDataSet);
-                MessageBox.Show("Изменения сохранены!");
+                try
+                {
+                    this.Validate();
+                    employesBindingSource.EndEdit();
+                    tableAdapterManager.UpdateAll(this.lazutkinDataSet);
+                    MessageBox.Show("Изменения сохранены!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка обновления: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+        }
+
+        private void saveEmployeeBtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Сохранить все изменения?", "Предупреждение", 
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Ошибка обновления: " + ex.Message);
+                try
+                {
+                    this.Validate();
+                    employesBindingSource.EndEdit();
+                    tableAdapterManager.UpdateAll(this.lazutkinDataSet);
+                    MessageBox.Show("Данные успешно сохранены!", "Информация",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка: " + ex.Message);
+                }
+            }
+        }
+
+        private void previousBtn_Click(object sender, EventArgs e)
+        {
+            if (employesBindingSource.Position > 0)
+            {
+                employesBindingSource.MovePrevious();
+            }
+            else
+            {
+                MessageBox.Show("Это первая запись!", "Информация",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            if (employesBindingSource.Position + 1 < employesBindingSource.Count)
+            {
+                employesBindingSource.MoveNext();
+            }
+            else
+            {
+                MessageBox.Show("Это последняя запись!", "Информация", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

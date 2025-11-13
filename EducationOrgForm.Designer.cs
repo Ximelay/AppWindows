@@ -61,6 +61,9 @@
             this.editEducationOrgBtn = new System.Windows.Forms.Button();
             this.removeEducationOrgBtn = new System.Windows.Forms.Button();
             this.allEducationOrgBtn = new System.Windows.Forms.Button();
+            this.nextBtn = new System.Windows.Forms.Button();
+            this.previousBtn = new System.Windows.Forms.Button();
+            this.saveEducOrgBtn = new System.Windows.Forms.Button();
             name_OrganisationLabel = new System.Windows.Forms.Label();
             email_OrganisationLabel = new System.Windows.Forms.Label();
             director_FIO_OrganizationLabel = new System.Windows.Forms.Label();
@@ -264,7 +267,7 @@
             // 
             this.name_OrganisationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.educational_OrganisationsBindingSource, "Name_Organisation", true));
             this.name_OrganisationTextBox.Location = new System.Drawing.Point(226, 90);
-            this.name_OrganisationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.name_OrganisationTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.name_OrganisationTextBox.Name = "name_OrganisationTextBox";
             this.name_OrganisationTextBox.Size = new System.Drawing.Size(262, 20);
             this.name_OrganisationTextBox.TabIndex = 2;
@@ -273,7 +276,7 @@
             // 
             this.email_OrganisationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.educational_OrganisationsBindingSource, "Email_Organisation", true));
             this.email_OrganisationTextBox.Location = new System.Drawing.Point(226, 122);
-            this.email_OrganisationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.email_OrganisationTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.email_OrganisationTextBox.Name = "email_OrganisationTextBox";
             this.email_OrganisationTextBox.Size = new System.Drawing.Size(262, 20);
             this.email_OrganisationTextBox.TabIndex = 4;
@@ -282,7 +285,7 @@
             // 
             this.director_FIO_OrganizationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.educational_OrganisationsBindingSource, "Director_FIO_Organization", true));
             this.director_FIO_OrganizationTextBox.Location = new System.Drawing.Point(226, 157);
-            this.director_FIO_OrganizationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.director_FIO_OrganizationTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.director_FIO_OrganizationTextBox.Name = "director_FIO_OrganizationTextBox";
             this.director_FIO_OrganizationTextBox.Size = new System.Drawing.Size(262, 20);
             this.director_FIO_OrganizationTextBox.TabIndex = 6;
@@ -291,7 +294,7 @@
             // 
             this.number_Phone_OrganizationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.educational_OrganisationsBindingSource, "Number_Phone_Organization", true));
             this.number_Phone_OrganizationTextBox.Location = new System.Drawing.Point(226, 192);
-            this.number_Phone_OrganizationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.number_Phone_OrganizationTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.number_Phone_OrganizationTextBox.Name = "number_Phone_OrganizationTextBox";
             this.number_Phone_OrganizationTextBox.Size = new System.Drawing.Size(262, 20);
             this.number_Phone_OrganizationTextBox.TabIndex = 8;
@@ -326,6 +329,7 @@
             this.addEducationOrgBtn.TabIndex = 14;
             this.addEducationOrgBtn.Text = "Создать";
             this.addEducationOrgBtn.UseVisualStyleBackColor = false;
+            this.addEducationOrgBtn.Click += new System.EventHandler(this.addEducationOrgBtn_Click);
             // 
             // editEducationOrgBtn
             // 
@@ -336,6 +340,7 @@
             this.editEducationOrgBtn.TabIndex = 15;
             this.editEducationOrgBtn.Text = "Изменить";
             this.editEducationOrgBtn.UseVisualStyleBackColor = false;
+            this.editEducationOrgBtn.Click += new System.EventHandler(this.editEducationOrgBtn_Click);
             // 
             // removeEducationOrgBtn
             // 
@@ -346,6 +351,7 @@
             this.removeEducationOrgBtn.TabIndex = 16;
             this.removeEducationOrgBtn.Text = "Удалить";
             this.removeEducationOrgBtn.UseVisualStyleBackColor = false;
+            this.removeEducationOrgBtn.Click += new System.EventHandler(this.removeEducationOrgBtn_Click);
             // 
             // allEducationOrgBtn
             // 
@@ -355,12 +361,47 @@
             this.allEducationOrgBtn.TabIndex = 17;
             this.allEducationOrgBtn.Text = "Все ОУ";
             this.allEducationOrgBtn.UseVisualStyleBackColor = true;
+            this.allEducationOrgBtn.Click += new System.EventHandler(this.allEducationOrgBtn_Click);
+            // 
+            // nextBtn
+            // 
+            this.nextBtn.Location = new System.Drawing.Point(307, 229);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(75, 23);
+            this.nextBtn.TabIndex = 18;
+            this.nextBtn.Text = "->";
+            this.nextBtn.UseVisualStyleBackColor = true;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
+            // 
+            // previousBtn
+            // 
+            this.previousBtn.Location = new System.Drawing.Point(226, 229);
+            this.previousBtn.Name = "previousBtn";
+            this.previousBtn.Size = new System.Drawing.Size(75, 23);
+            this.previousBtn.TabIndex = 19;
+            this.previousBtn.Text = "<-";
+            this.previousBtn.UseVisualStyleBackColor = true;
+            this.previousBtn.Click += new System.EventHandler(this.previousBtn_Click);
+            // 
+            // saveEducOrgBtn
+            // 
+            this.saveEducOrgBtn.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.saveEducOrgBtn.Location = new System.Drawing.Point(498, 269);
+            this.saveEducOrgBtn.Name = "saveEducOrgBtn";
+            this.saveEducOrgBtn.Size = new System.Drawing.Size(75, 23);
+            this.saveEducOrgBtn.TabIndex = 20;
+            this.saveEducOrgBtn.Text = "Сохранить";
+            this.saveEducOrgBtn.UseVisualStyleBackColor = false;
+            this.saveEducOrgBtn.Click += new System.EventHandler(this.saveEducOrgBtn_Click);
             // 
             // EducationOrgForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.saveEducOrgBtn);
+            this.Controls.Add(this.previousBtn);
+            this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.allEducationOrgBtn);
             this.Controls.Add(this.removeEducationOrgBtn);
             this.Controls.Add(this.editEducationOrgBtn);
@@ -376,7 +417,7 @@
             this.Controls.Add(name_OrganisationLabel);
             this.Controls.Add(this.name_OrganisationTextBox);
             this.Controls.Add(this.educational_OrganisationsBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EducationOrgForm";
             this.Text = "EducationOrgForm";
             this.Load += new System.EventHandler(this.EducationOrgForm_Load);
@@ -419,5 +460,8 @@
         private System.Windows.Forms.Button editEducationOrgBtn;
         private System.Windows.Forms.Button removeEducationOrgBtn;
         private System.Windows.Forms.Button allEducationOrgBtn;
+        private System.Windows.Forms.Button nextBtn;
+        private System.Windows.Forms.Button previousBtn;
+        private System.Windows.Forms.Button saveEducOrgBtn;
     }
 }
