@@ -300,6 +300,107 @@ SELECT ID_Rykovoditel, Famali_Rykovoditel, Name_Rykovoditel, Otchestvo_Rykovodit
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ВсеУчастникиИДругиеДанныеTableAdapter" GeneratorDataComponentClassName="ВсеУчастникиИДругиеДанныеTableAdapter" Name="ВсеУчастникиИДругиеДанные" UserDataComponentName="ВсеУчастникиИДругиеДанныеTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LazutkinConnectionString (Settings)" DbObjectName="Lazutkin.dbo.ВсеУчастникиИДругиеДанные" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_Участинка, Фамилия_Участника, Имя_Участника, Отчество_Участника, Почта_Участника, Номер_Телефона_Участинка, Наименование_Организации, Почта_Организации, ФИО_Директора_Организации, Номер_Телефона_Организации, Фамилия_Руководителя, Имя_Руководителя, Отчество_Руководителя, Почта_Руководителя, Номер_Телефона_Руководителя, Номинация FROM dbo.ВсеУчастникиИДругиеДанные</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Участинка" DataSetColumn="ID_Участинка" />
+              <Mapping SourceColumn="Фамилия_Участника" DataSetColumn="Фамилия_Участника" />
+              <Mapping SourceColumn="Имя_Участника" DataSetColumn="Имя_Участника" />
+              <Mapping SourceColumn="Отчество_Участника" DataSetColumn="Отчество_Участника" />
+              <Mapping SourceColumn="Почта_Участника" DataSetColumn="Почта_Участника" />
+              <Mapping SourceColumn="Номер_Телефона_Участинка" DataSetColumn="Номер_Телефона_Участинка" />
+              <Mapping SourceColumn="Наименование_Организации" DataSetColumn="Наименование_Организации" />
+              <Mapping SourceColumn="Почта_Организации" DataSetColumn="Почта_Организации" />
+              <Mapping SourceColumn="ФИО_Директора_Организации" DataSetColumn="ФИО_Директора_Организации" />
+              <Mapping SourceColumn="Номер_Телефона_Организации" DataSetColumn="Номер_Телефона_Организации" />
+              <Mapping SourceColumn="Фамилия_Руководителя" DataSetColumn="Фамилия_Руководителя" />
+              <Mapping SourceColumn="Имя_Руководителя" DataSetColumn="Имя_Руководителя" />
+              <Mapping SourceColumn="Отчество_Руководителя" DataSetColumn="Отчество_Руководителя" />
+              <Mapping SourceColumn="Почта_Руководителя" DataSetColumn="Почта_Руководителя" />
+              <Mapping SourceColumn="Номер_Телефона_Руководителя" DataSetColumn="Номер_Телефона_Руководителя" />
+              <Mapping SourceColumn="Номинация" DataSetColumn="Номинация" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="КоличествоУчастниковУРуководителяTableAdapter" GeneratorDataComponentClassName="КоличествоУчастниковУРуководителяTableAdapter" Name="КоличествоУчастниковУРуководителя" UserDataComponentName="КоличествоУчастниковУРуководителяTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LazutkinConnectionString (Settings)" DbObjectName="Lazutkin.dbo.КоличествоУчастниковУРуководителя" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Фамилия, Имя, Отчество, Количество_Участников FROM dbo.КоличествоУчастниковУРуководителя</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Фамилия" DataSetColumn="Фамилия" />
+              <Mapping SourceColumn="Имя" DataSetColumn="Имя" />
+              <Mapping SourceColumn="Отчество" DataSetColumn="Отчество" />
+              <Mapping SourceColumn="Количество_Участников" DataSetColumn="Количество_Участников" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="СортировкаПоНоминациямTableAdapter" GeneratorDataComponentClassName="СортировкаПоНоминациямTableAdapter" Name="СортировкаПоНоминациям" UserDataComponentName="СортировкаПоНоминациямTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LazutkinConnectionString (Settings)" DbObjectName="Lazutkin.dbo.СортировкаПоНоминациям" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Номинация, Количество_участников FROM dbo.СортировкаПоНоминациям</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Номинация" DataSetColumn="Номинация" />
+              <Mapping SourceColumn="Количество_участников" DataSetColumn="Количество_участников" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="СортировкаПоОрганизациямTableAdapter" GeneratorDataComponentClassName="СортировкаПоОрганизациямTableAdapter" Name="СортировкаПоОрганизациям" UserDataComponentName="СортировкаПоОрганизациямTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LazutkinConnectionString (Settings)" DbObjectName="Lazutkin.dbo.СортировкаПоОрганизациям" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Название_Организации, Количество_участников FROM dbo.СортировкаПоОрганизациям</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Название_Организации" DataSetColumn="Название_Организации" />
+              <Mapping SourceColumn="Количество_участников" DataSetColumn="Количество_участников" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="УКакойНоминацииМеньшеТрехУчастниковTableAdapter" GeneratorDataComponentClassName="УКакойНоминацииМеньшеТрехУчастниковTableAdapter" Name="УКакойНоминацииМеньшеТрехУчастников" UserDataComponentName="УКакойНоминацииМеньшеТрехУчастниковTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LazutkinConnectionString (Settings)" DbObjectName="Lazutkin.dbo.УКакойНоминацииМеньшеТрехУчастников" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Номинация, Количество_Участников FROM dbo.УКакойНоминацииМеньшеТрехУчастников</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Номинация" DataSetColumn="Номинация" />
+              <Mapping SourceColumn="Количество_Участников" DataSetColumn="Количество_Участников" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -357,49 +458,49 @@ SELECT ID_Rykovoditel, Famali_Rykovoditel, Name_Rykovoditel, Otchestvo_Rykovodit
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Employes" msprop:Generator_RowClassName="EmployesRow" msprop:Generator_RowEvHandlerName="EmployesRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployesRowDeleted" msprop:Generator_RowDeletingName="EmployesRowDeleting" msprop:Generator_RowEvArgName="EmployesRowChangeEvent" msprop:Generator_TablePropName="Employes" msprop:Generator_RowChangedName="EmployesRowChanged" msprop:Generator_UserTableName="Employes" msprop:Generator_RowChangingName="EmployesRowChanging" msprop:Generator_TableClassName="EmployesDataTable" msprop:Generator_TableVarName="tableEmployes">
+        <xs:element name="Employes" msprop:Generator_RowEvHandlerName="EmployesRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployesRowDeleted" msprop:Generator_RowDeletingName="EmployesRowDeleting" msprop:Generator_RowEvArgName="EmployesRowChangeEvent" msprop:Generator_TablePropName="Employes" msprop:Generator_RowChangedName="EmployesRowChanged" msprop:Generator_UserTableName="Employes" msprop:Generator_RowChangingName="EmployesRowChanging" msprop:Generator_RowClassName="EmployesRow" msprop:Generator_TableClassName="EmployesDataTable" msprop:Generator_TableVarName="tableEmployes">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID_Employee" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID_Employee" msprop:Generator_ColumnPropNameInTable="ID_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="ID_Employee" msprop:Generator_ColumnVarNameInTable="columnID_Employee" type="xs:int" />
-              <xs:element name="Famaili_Employee" msprop:Generator_UserColumnName="Famaili_Employee" msprop:Generator_ColumnPropNameInTable="Famaili_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Famaili_Employee" msprop:Generator_ColumnVarNameInTable="columnFamaili_Employee">
+              <xs:element name="ID_Employee" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="ID_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="ID_Employee" msprop:Generator_UserColumnName="ID_Employee" msprop:Generator_ColumnVarNameInTable="columnID_Employee" type="xs:int" />
+              <xs:element name="Famaili_Employee" msprop:Generator_ColumnPropNameInTable="Famaili_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Famaili_Employee" msprop:Generator_UserColumnName="Famaili_Employee" msprop:Generator_ColumnVarNameInTable="columnFamaili_Employee">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Name_Empoloyee" msprop:Generator_UserColumnName="Name_Empoloyee" msprop:Generator_ColumnPropNameInTable="Name_EmpoloyeeColumn" msprop:Generator_ColumnPropNameInRow="Name_Empoloyee" msprop:Generator_ColumnVarNameInTable="columnName_Empoloyee">
+              <xs:element name="Name_Empoloyee" msprop:Generator_ColumnPropNameInTable="Name_EmpoloyeeColumn" msprop:Generator_ColumnPropNameInRow="Name_Empoloyee" msprop:Generator_UserColumnName="Name_Empoloyee" msprop:Generator_ColumnVarNameInTable="columnName_Empoloyee">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Otchestvo_Employee" msprop:Generator_UserColumnName="Otchestvo_Employee" msprop:Generator_ColumnPropNameInTable="Otchestvo_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Otchestvo_Employee" msprop:Generator_ColumnVarNameInTable="columnOtchestvo_Employee" minOccurs="0">
+              <xs:element name="Otchestvo_Employee" msprop:Generator_ColumnPropNameInTable="Otchestvo_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Otchestvo_Employee" msprop:Generator_UserColumnName="Otchestvo_Employee" msprop:Generator_ColumnVarNameInTable="columnOtchestvo_Employee" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ID_Organisation" msprop:Generator_UserColumnName="ID_Organisation" msprop:Generator_ColumnPropNameInTable="ID_OrganisationColumn" msprop:Generator_ColumnPropNameInRow="ID_Organisation" msprop:Generator_ColumnVarNameInTable="columnID_Organisation" type="xs:int" />
-              <xs:element name="ID_Rykovoditel" msprop:Generator_UserColumnName="ID_Rykovoditel" msprop:Generator_ColumnPropNameInTable="ID_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="ID_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnID_Rykovoditel" type="xs:int" />
-              <xs:element name="ID_Nomination" msprop:Generator_UserColumnName="ID_Nomination" msprop:Generator_ColumnPropNameInTable="ID_NominationColumn" msprop:Generator_ColumnPropNameInRow="ID_Nomination" msprop:Generator_ColumnVarNameInTable="columnID_Nomination" type="xs:int" />
-              <xs:element name="Phone_Employee" msprop:Generator_UserColumnName="Phone_Employee" msprop:Generator_ColumnPropNameInTable="Phone_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Phone_Employee" msprop:Generator_ColumnVarNameInTable="columnPhone_Employee">
+              <xs:element name="ID_Organisation" msprop:Generator_ColumnPropNameInTable="ID_OrganisationColumn" msprop:Generator_ColumnPropNameInRow="ID_Organisation" msprop:Generator_UserColumnName="ID_Organisation" msprop:Generator_ColumnVarNameInTable="columnID_Organisation" type="xs:int" />
+              <xs:element name="ID_Rykovoditel" msprop:Generator_ColumnPropNameInTable="ID_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="ID_Rykovoditel" msprop:Generator_UserColumnName="ID_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnID_Rykovoditel" type="xs:int" />
+              <xs:element name="ID_Nomination" msprop:Generator_ColumnPropNameInTable="ID_NominationColumn" msprop:Generator_ColumnPropNameInRow="ID_Nomination" msprop:Generator_UserColumnName="ID_Nomination" msprop:Generator_ColumnVarNameInTable="columnID_Nomination" type="xs:int" />
+              <xs:element name="Phone_Employee" msprop:Generator_ColumnPropNameInTable="Phone_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Phone_Employee" msprop:Generator_UserColumnName="Phone_Employee" msprop:Generator_ColumnVarNameInTable="columnPhone_Employee">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Login_Employee" msprop:Generator_UserColumnName="Login_Employee" msprop:Generator_ColumnPropNameInTable="Login_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Login_Employee" msprop:Generator_ColumnVarNameInTable="columnLogin_Employee">
+              <xs:element name="Login_Employee" msprop:Generator_ColumnPropNameInTable="Login_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Login_Employee" msprop:Generator_UserColumnName="Login_Employee" msprop:Generator_ColumnVarNameInTable="columnLogin_Employee">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Password_Employee" msprop:Generator_UserColumnName="Password_Employee" msprop:Generator_ColumnPropNameInTable="Password_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Password_Employee" msprop:Generator_ColumnVarNameInTable="columnPassword_Employee">
+              <xs:element name="Password_Employee" msprop:Generator_ColumnPropNameInTable="Password_EmployeeColumn" msprop:Generator_ColumnPropNameInRow="Password_Employee" msprop:Generator_UserColumnName="Password_Employee" msprop:Generator_ColumnVarNameInTable="columnPassword_Employee">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -409,46 +510,46 @@ SELECT ID_Rykovoditel, Famali_Rykovoditel, Name_Rykovoditel, Otchestvo_Rykovodit
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Rykovoditels" msprop:Generator_RowClassName="RykovoditelsRow" msprop:Generator_RowEvHandlerName="RykovoditelsRowChangeEventHandler" msprop:Generator_RowDeletedName="RykovoditelsRowDeleted" msprop:Generator_RowDeletingName="RykovoditelsRowDeleting" msprop:Generator_RowEvArgName="RykovoditelsRowChangeEvent" msprop:Generator_TablePropName="Rykovoditels" msprop:Generator_RowChangedName="RykovoditelsRowChanged" msprop:Generator_UserTableName="Rykovoditels" msprop:Generator_RowChangingName="RykovoditelsRowChanging" msprop:Generator_TableClassName="RykovoditelsDataTable" msprop:Generator_TableVarName="tableRykovoditels">
+        <xs:element name="Rykovoditels" msprop:Generator_RowEvHandlerName="RykovoditelsRowChangeEventHandler" msprop:Generator_RowDeletedName="RykovoditelsRowDeleted" msprop:Generator_RowDeletingName="RykovoditelsRowDeleting" msprop:Generator_RowEvArgName="RykovoditelsRowChangeEvent" msprop:Generator_TablePropName="Rykovoditels" msprop:Generator_RowChangedName="RykovoditelsRowChanged" msprop:Generator_UserTableName="Rykovoditels" msprop:Generator_RowChangingName="RykovoditelsRowChanging" msprop:Generator_RowClassName="RykovoditelsRow" msprop:Generator_TableClassName="RykovoditelsDataTable" msprop:Generator_TableVarName="tableRykovoditels">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID_Rykovoditel" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID_Rykovoditel" msprop:Generator_ColumnPropNameInTable="ID_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="ID_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnID_Rykovoditel" type="xs:int" />
-              <xs:element name="Famali_Rykovoditel" msprop:Generator_UserColumnName="Famali_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Famali_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Famali_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnFamali_Rykovoditel">
+              <xs:element name="ID_Rykovoditel" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="ID_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="ID_Rykovoditel" msprop:Generator_UserColumnName="ID_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnID_Rykovoditel" type="xs:int" />
+              <xs:element name="Famali_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Famali_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Famali_Rykovoditel" msprop:Generator_UserColumnName="Famali_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnFamali_Rykovoditel">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Name_Rykovoditel" msprop:Generator_UserColumnName="Name_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Name_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Name_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnName_Rykovoditel">
+              <xs:element name="Name_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Name_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Name_Rykovoditel" msprop:Generator_UserColumnName="Name_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnName_Rykovoditel">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Otchestvo_Rykovoditel" msprop:Generator_UserColumnName="Otchestvo_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Otchestvo_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Otchestvo_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnOtchestvo_Rykovoditel" minOccurs="0">
+              <xs:element name="Otchestvo_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Otchestvo_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Otchestvo_Rykovoditel" msprop:Generator_UserColumnName="Otchestvo_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnOtchestvo_Rykovoditel" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Phone_Rykovoditel" msprop:Generator_UserColumnName="Phone_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Phone_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Phone_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnPhone_Rykovoditel">
+              <xs:element name="Phone_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Phone_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Phone_Rykovoditel" msprop:Generator_UserColumnName="Phone_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnPhone_Rykovoditel">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Login_Rekovoditel" msprop:Generator_UserColumnName="Login_Rekovoditel" msprop:Generator_ColumnPropNameInTable="Login_RekovoditelColumn" msprop:Generator_ColumnPropNameInRow="Login_Rekovoditel" msprop:Generator_ColumnVarNameInTable="columnLogin_Rekovoditel">
+              <xs:element name="Login_Rekovoditel" msprop:Generator_ColumnPropNameInTable="Login_RekovoditelColumn" msprop:Generator_ColumnPropNameInRow="Login_Rekovoditel" msprop:Generator_UserColumnName="Login_Rekovoditel" msprop:Generator_ColumnVarNameInTable="columnLogin_Rekovoditel">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Password_Rykovoditel" msprop:Generator_UserColumnName="Password_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Password_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Password_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnPassword_Rykovoditel">
+              <xs:element name="Password_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Password_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Password_Rykovoditel" msprop:Generator_UserColumnName="Password_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnPassword_Rykovoditel">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -458,51 +559,233 @@ SELECT ID_Rykovoditel, Famali_Rykovoditel, Name_Rykovoditel, Otchestvo_Rykovodit
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SelectAllEmployees" msprop:Generator_RowEvHandlerName="SelectAllEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="SelectAllEmployeesRowDeleted" msprop:Generator_RowDeletingName="SelectAllEmployeesRowDeleting" msprop:Generator_RowEvArgName="SelectAllEmployeesRowChangeEvent" msprop:Generator_TablePropName="SelectAllEmployees" msprop:Generator_RowChangedName="SelectAllEmployeesRowChanged" msprop:Generator_RowChangingName="SelectAllEmployeesRowChanging" msprop:Generator_TableClassName="SelectAllEmployeesDataTable" msprop:Generator_RowClassName="SelectAllEmployeesRow" msprop:Generator_TableVarName="tableSelectAllEmployees" msprop:Generator_UserTableName="SelectAllEmployees">
+        <xs:element name="SelectAllEmployees" msprop:Generator_RowClassName="SelectAllEmployeesRow" msprop:Generator_RowEvHandlerName="SelectAllEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="SelectAllEmployeesRowDeleted" msprop:Generator_RowDeletingName="SelectAllEmployeesRowDeleting" msprop:Generator_RowEvArgName="SelectAllEmployeesRowChangeEvent" msprop:Generator_TablePropName="SelectAllEmployees" msprop:Generator_RowChangedName="SelectAllEmployeesRowChanged" msprop:Generator_UserTableName="SelectAllEmployees" msprop:Generator_RowChangingName="SelectAllEmployeesRowChanging" msprop:Generator_TableClassName="SelectAllEmployeesDataTable" msprop:Generator_TableVarName="tableSelectAllEmployees">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Surname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_UserColumnName="Surname">
+              <xs:element name="Surname" msprop:Generator_UserColumnName="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name">
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Patronymic" msprop:Generator_ColumnPropNameInRow="Patronymic" msprop:Generator_ColumnPropNameInTable="PatronymicColumn" msprop:Generator_ColumnVarNameInTable="columnPatronymic" msprop:Generator_UserColumnName="Patronymic" minOccurs="0">
+              <xs:element name="Patronymic" msprop:Generator_UserColumnName="Patronymic" msprop:Generator_ColumnPropNameInTable="PatronymicColumn" msprop:Generator_ColumnPropNameInRow="Patronymic" msprop:Generator_ColumnVarNameInTable="columnPatronymic" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nomination" msprop:Generator_ColumnPropNameInRow="Nomination" msprop:Generator_ColumnPropNameInTable="NominationColumn" msprop:Generator_ColumnVarNameInTable="columnNomination" msprop:Generator_UserColumnName="Nomination">
+              <xs:element name="Nomination" msprop:Generator_UserColumnName="Nomination" msprop:Generator_ColumnPropNameInTable="NominationColumn" msprop:Generator_ColumnPropNameInRow="Nomination" msprop:Generator_ColumnVarNameInTable="columnNomination">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Surname_Rykovoditel" msprop:Generator_ColumnPropNameInRow="Surname_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Surname_RykovoditelColumn" msprop:Generator_ColumnVarNameInTable="columnSurname_Rykovoditel" msprop:Generator_UserColumnName="Surname_Rykovoditel">
+              <xs:element name="Surname_Rykovoditel" msprop:Generator_UserColumnName="Surname_Rykovoditel" msprop:Generator_ColumnPropNameInTable="Surname_RykovoditelColumn" msprop:Generator_ColumnPropNameInRow="Surname_Rykovoditel" msprop:Generator_ColumnVarNameInTable="columnSurname_Rykovoditel">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Name_Organization" msprop:Generator_ColumnPropNameInRow="Name_Organization" msprop:Generator_ColumnPropNameInTable="Name_OrganizationColumn" msprop:Generator_ColumnVarNameInTable="columnName_Organization" msprop:Generator_UserColumnName="Name_Organization">
+              <xs:element name="Name_Organization" msprop:Generator_UserColumnName="Name_Organization" msprop:Generator_ColumnPropNameInTable="Name_OrganizationColumn" msprop:Generator_ColumnPropNameInRow="Name_Organization" msprop:Generator_ColumnVarNameInTable="columnName_Organization">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ВсеУчастникиИДругиеДанные" msprop:Generator_RowEvHandlerName="ВсеУчастникиИДругиеДанныеRowChangeEventHandler" msprop:Generator_RowDeletedName="ВсеУчастникиИДругиеДанныеRowDeleted" msprop:Generator_RowDeletingName="ВсеУчастникиИДругиеДанныеRowDeleting" msprop:Generator_RowEvArgName="ВсеУчастникиИДругиеДанныеRowChangeEvent" msprop:Generator_TablePropName="ВсеУчастникиИДругиеДанные" msprop:Generator_RowChangedName="ВсеУчастникиИДругиеДанныеRowChanged" msprop:Generator_RowChangingName="ВсеУчастникиИДругиеДанныеRowChanging" msprop:Generator_TableClassName="ВсеУчастникиИДругиеДанныеDataTable" msprop:Generator_RowClassName="ВсеУчастникиИДругиеДанныеRow" msprop:Generator_TableVarName="tableВсеУчастникиИДругиеДанные" msprop:Generator_UserTableName="ВсеУчастникиИДругиеДанные">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Участинка" msprop:Generator_ColumnPropNameInRow="ID_Участинка" msprop:Generator_ColumnPropNameInTable="ID_УчастинкаColumn" msprop:Generator_ColumnVarNameInTable="columnID_Участинка" msprop:Generator_UserColumnName="ID_Участинка" type="xs:int" />
+              <xs:element name="Фамилия_Участника" msprop:Generator_ColumnPropNameInRow="Фамилия_Участника" msprop:Generator_ColumnPropNameInTable="Фамилия_УчастникаColumn" msprop:Generator_ColumnVarNameInTable="columnФамилия_Участника" msprop:Generator_UserColumnName="Фамилия_Участника">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Имя_Участника" msprop:Generator_ColumnPropNameInRow="Имя_Участника" msprop:Generator_ColumnPropNameInTable="Имя_УчастникаColumn" msprop:Generator_ColumnVarNameInTable="columnИмя_Участника" msprop:Generator_UserColumnName="Имя_Участника">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Отчество_Участника" msprop:Generator_ColumnPropNameInRow="Отчество_Участника" msprop:Generator_ColumnPropNameInTable="Отчество_УчастникаColumn" msprop:Generator_ColumnVarNameInTable="columnОтчество_Участника" msprop:Generator_UserColumnName="Отчество_Участника" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Почта_Участника" msprop:Generator_ColumnPropNameInRow="Почта_Участника" msprop:Generator_ColumnPropNameInTable="Почта_УчастникаColumn" msprop:Generator_ColumnVarNameInTable="columnПочта_Участника" msprop:Generator_UserColumnName="Почта_Участника">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Номер_Телефона_Участинка" msprop:Generator_ColumnPropNameInRow="Номер_Телефона_Участинка" msprop:Generator_ColumnPropNameInTable="Номер_Телефона_УчастинкаColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_Телефона_Участинка" msprop:Generator_UserColumnName="Номер_Телефона_Участинка">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Наименование_Организации" msprop:Generator_ColumnPropNameInRow="Наименование_Организации" msprop:Generator_ColumnPropNameInTable="Наименование_ОрганизацииColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование_Организации" msprop:Generator_UserColumnName="Наименование_Организации">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Почта_Организации" msprop:Generator_ColumnPropNameInRow="Почта_Организации" msprop:Generator_ColumnPropNameInTable="Почта_ОрганизацииColumn" msprop:Generator_ColumnVarNameInTable="columnПочта_Организации" msprop:Generator_UserColumnName="Почта_Организации">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ФИО_Директора_Организации" msprop:Generator_ColumnPropNameInRow="ФИО_Директора_Организации" msprop:Generator_ColumnPropNameInTable="ФИО_Директора_ОрганизацииColumn" msprop:Generator_ColumnVarNameInTable="columnФИО_Директора_Организации" msprop:Generator_UserColumnName="ФИО_Директора_Организации">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Номер_Телефона_Организации" msprop:Generator_ColumnPropNameInRow="Номер_Телефона_Организации" msprop:Generator_ColumnPropNameInTable="Номер_Телефона_ОрганизацииColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_Телефона_Организации" msprop:Generator_UserColumnName="Номер_Телефона_Организации">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Фамилия_Руководителя" msprop:Generator_ColumnPropNameInRow="Фамилия_Руководителя" msprop:Generator_ColumnPropNameInTable="Фамилия_РуководителяColumn" msprop:Generator_ColumnVarNameInTable="columnФамилия_Руководителя" msprop:Generator_UserColumnName="Фамилия_Руководителя">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Имя_Руководителя" msprop:Generator_ColumnPropNameInRow="Имя_Руководителя" msprop:Generator_ColumnPropNameInTable="Имя_РуководителяColumn" msprop:Generator_ColumnVarNameInTable="columnИмя_Руководителя" msprop:Generator_UserColumnName="Имя_Руководителя">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Отчество_Руководителя" msprop:Generator_ColumnPropNameInRow="Отчество_Руководителя" msprop:Generator_ColumnPropNameInTable="Отчество_РуководителяColumn" msprop:Generator_ColumnVarNameInTable="columnОтчество_Руководителя" msprop:Generator_UserColumnName="Отчество_Руководителя" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Почта_Руководителя" msprop:Generator_ColumnPropNameInRow="Почта_Руководителя" msprop:Generator_ColumnPropNameInTable="Почта_РуководителяColumn" msprop:Generator_ColumnVarNameInTable="columnПочта_Руководителя" msprop:Generator_UserColumnName="Почта_Руководителя">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Номер_Телефона_Руководителя" msprop:Generator_ColumnPropNameInRow="Номер_Телефона_Руководителя" msprop:Generator_ColumnPropNameInTable="Номер_Телефона_РуководителяColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_Телефона_Руководителя" msprop:Generator_UserColumnName="Номер_Телефона_Руководителя">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Номинация" msprop:Generator_ColumnPropNameInRow="Номинация" msprop:Generator_ColumnPropNameInTable="НоминацияColumn" msprop:Generator_ColumnVarNameInTable="columnНоминация" msprop:Generator_UserColumnName="Номинация">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="КоличествоУчастниковУРуководителя" msprop:Generator_RowEvHandlerName="КоличествоУчастниковУРуководителяRowChangeEventHandler" msprop:Generator_RowDeletedName="КоличествоУчастниковУРуководителяRowDeleted" msprop:Generator_RowDeletingName="КоличествоУчастниковУРуководителяRowDeleting" msprop:Generator_RowEvArgName="КоличествоУчастниковУРуководителяRowChangeEvent" msprop:Generator_TablePropName="КоличествоУчастниковУРуководителя" msprop:Generator_RowChangedName="КоличествоУчастниковУРуководителяRowChanged" msprop:Generator_RowChangingName="КоличествоУчастниковУРуководителяRowChanging" msprop:Generator_TableClassName="КоличествоУчастниковУРуководителяDataTable" msprop:Generator_RowClassName="КоличествоУчастниковУРуководителяRow" msprop:Generator_TableVarName="tableКоличествоУчастниковУРуководителя" msprop:Generator_UserTableName="КоличествоУчастниковУРуководителя">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Фамилия" msprop:Generator_ColumnPropNameInRow="Фамилия" msprop:Generator_ColumnPropNameInTable="ФамилияColumn" msprop:Generator_ColumnVarNameInTable="columnФамилия" msprop:Generator_UserColumnName="Фамилия">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Имя" msprop:Generator_ColumnPropNameInRow="Имя" msprop:Generator_ColumnPropNameInTable="ИмяColumn" msprop:Generator_ColumnVarNameInTable="columnИмя" msprop:Generator_UserColumnName="Имя">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Отчество" msprop:Generator_ColumnPropNameInRow="Отчество" msprop:Generator_ColumnPropNameInTable="ОтчествоColumn" msprop:Generator_ColumnVarNameInTable="columnОтчество" msprop:Generator_UserColumnName="Отчество" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Количество_Участников" msprop:Generator_ColumnPropNameInRow="Количество_Участников" msprop:Generator_ColumnPropNameInTable="Количество_УчастниковColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество_Участников" msprop:Generator_UserColumnName="Количество_Участников" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="СортировкаПоНоминациям" msprop:Generator_RowEvHandlerName="СортировкаПоНоминациямRowChangeEventHandler" msprop:Generator_RowDeletedName="СортировкаПоНоминациямRowDeleted" msprop:Generator_RowDeletingName="СортировкаПоНоминациямRowDeleting" msprop:Generator_RowEvArgName="СортировкаПоНоминациямRowChangeEvent" msprop:Generator_TablePropName="СортировкаПоНоминациям" msprop:Generator_RowChangedName="СортировкаПоНоминациямRowChanged" msprop:Generator_RowChangingName="СортировкаПоНоминациямRowChanging" msprop:Generator_TableClassName="СортировкаПоНоминациямDataTable" msprop:Generator_RowClassName="СортировкаПоНоминациямRow" msprop:Generator_TableVarName="tableСортировкаПоНоминациям" msprop:Generator_UserTableName="СортировкаПоНоминациям">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Номинация" msprop:Generator_ColumnPropNameInRow="Номинация" msprop:Generator_ColumnPropNameInTable="НоминацияColumn" msprop:Generator_ColumnVarNameInTable="columnНоминация" msprop:Generator_UserColumnName="Номинация">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Количество_участников" msprop:Generator_ColumnPropNameInRow="Количество_участников" msprop:Generator_ColumnPropNameInTable="Количество_участниковColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество_участников" msprop:Generator_UserColumnName="Количество_участников" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="СортировкаПоОрганизациям" msprop:Generator_RowEvHandlerName="СортировкаПоОрганизациямRowChangeEventHandler" msprop:Generator_RowDeletedName="СортировкаПоОрганизациямRowDeleted" msprop:Generator_RowDeletingName="СортировкаПоОрганизациямRowDeleting" msprop:Generator_RowEvArgName="СортировкаПоОрганизациямRowChangeEvent" msprop:Generator_TablePropName="СортировкаПоОрганизациям" msprop:Generator_RowChangedName="СортировкаПоОрганизациямRowChanged" msprop:Generator_RowChangingName="СортировкаПоОрганизациямRowChanging" msprop:Generator_TableClassName="СортировкаПоОрганизациямDataTable" msprop:Generator_RowClassName="СортировкаПоОрганизациямRow" msprop:Generator_TableVarName="tableСортировкаПоОрганизациям" msprop:Generator_UserTableName="СортировкаПоОрганизациям">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Название_Организации" msprop:Generator_ColumnPropNameInRow="Название_Организации" msprop:Generator_ColumnPropNameInTable="Название_ОрганизацииColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание_Организации" msprop:Generator_UserColumnName="Название_Организации">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Количество_участников" msprop:Generator_ColumnPropNameInRow="Количество_участников" msprop:Generator_ColumnPropNameInTable="Количество_участниковColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество_участников" msprop:Generator_UserColumnName="Количество_участников" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="УКакойНоминацииМеньшеТрехУчастников" msprop:Generator_RowEvHandlerName="УКакойНоминацииМеньшеТрехУчастниковRowChangeEventHandler" msprop:Generator_RowDeletedName="УКакойНоминацииМеньшеТрехУчастниковRowDeleted" msprop:Generator_RowDeletingName="УКакойНоминацииМеньшеТрехУчастниковRowDeleting" msprop:Generator_RowEvArgName="УКакойНоминацииМеньшеТрехУчастниковRowChangeEvent" msprop:Generator_TablePropName="УКакойНоминацииМеньшеТрехУчастников" msprop:Generator_RowChangedName="УКакойНоминацииМеньшеТрехУчастниковRowChanged" msprop:Generator_RowChangingName="УКакойНоминацииМеньшеТрехУчастниковRowChanging" msprop:Generator_TableClassName="УКакойНоминацииМеньшеТрехУчастниковDataTable" msprop:Generator_RowClassName="УКакойНоминацииМеньшеТрехУчастниковRow" msprop:Generator_TableVarName="tableУКакойНоминацииМеньшеТрехУчастников" msprop:Generator_UserTableName="УКакойНоминацииМеньшеТрехУчастников">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Номинация" msprop:Generator_ColumnPropNameInRow="Номинация" msprop:Generator_ColumnPropNameInTable="НоминацияColumn" msprop:Generator_ColumnVarNameInTable="columnНоминация" msprop:Generator_UserColumnName="Номинация">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Количество_Участников" msprop:Generator_ColumnPropNameInRow="Количество_Участников" msprop:Generator_ColumnPropNameInTable="Количество_УчастниковColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество_Участников" msprop:Generator_UserColumnName="Количество_Участников" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -524,12 +807,16 @@ SELECT ID_Rykovoditel, Famali_Rykovoditel, Name_Rykovoditel, Otchestvo_Rykovodit
       <xs:selector xpath=".//mstns:Rykovoditels" />
       <xs:field xpath="mstns:ID_Rykovoditel" />
     </xs:unique>
+    <xs:unique name="ВсеУчастникиИДругиеДанные_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ВсеУчастникиИДругиеДанные" />
+      <xs:field xpath="mstns:ID_Участинка" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Employes_Educational_Organisations" msdata:parent="Educational_Organisations" msdata:child="Employes" msdata:parentkey="ID_Organisation" msdata:childkey="ID_Organisation" msprop:Generator_UserParentTable="Educational_Organisations" msprop:Generator_UserChildTable="Employes" msprop:Generator_RelationVarName="relationFK_Employes_Educational_Organisations" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_UserRelationName="FK_Employes_Educational_Organisations" msprop:Generator_ParentPropName="Educational_OrganisationsRow" />
-      <msdata:Relationship name="FK_Employes_Nomination_Olimpiads" msdata:parent="Nomination_Olimpiads" msdata:child="Employes" msdata:parentkey="ID_Nomination" msdata:childkey="ID_Nomination" msprop:Generator_UserParentTable="Nomination_Olimpiads" msprop:Generator_UserChildTable="Employes" msprop:Generator_RelationVarName="relationFK_Employes_Nomination_Olimpiads" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_UserRelationName="FK_Employes_Nomination_Olimpiads" msprop:Generator_ParentPropName="Nomination_OlimpiadsRow" />
-      <msdata:Relationship name="FK_Employes_Rykovoditels" msdata:parent="Rykovoditels" msdata:child="Employes" msdata:parentkey="ID_Rykovoditel" msdata:childkey="ID_Rykovoditel" msprop:Generator_UserParentTable="Rykovoditels" msprop:Generator_UserChildTable="Employes" msprop:Generator_RelationVarName="relationFK_Employes_Rykovoditels" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_ParentPropName="RykovoditelsRow" msprop:Generator_UserRelationName="FK_Employes_Rykovoditels" />
+      <msdata:Relationship name="FK_Employes_Educational_Organisations" msdata:parent="Educational_Organisations" msdata:child="Employes" msdata:parentkey="ID_Organisation" msdata:childkey="ID_Organisation" msprop:Generator_UserParentTable="Educational_Organisations" msprop:Generator_UserChildTable="Employes" msprop:Generator_RelationVarName="relationFK_Employes_Educational_Organisations" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_ParentPropName="Educational_OrganisationsRow" msprop:Generator_UserRelationName="FK_Employes_Educational_Organisations" />
+      <msdata:Relationship name="FK_Employes_Nomination_Olimpiads" msdata:parent="Nomination_Olimpiads" msdata:child="Employes" msdata:parentkey="ID_Nomination" msdata:childkey="ID_Nomination" msprop:Generator_UserParentTable="Nomination_Olimpiads" msprop:Generator_UserChildTable="Employes" msprop:Generator_RelationVarName="relationFK_Employes_Nomination_Olimpiads" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_ParentPropName="Nomination_OlimpiadsRow" msprop:Generator_UserRelationName="FK_Employes_Nomination_Olimpiads" />
+      <msdata:Relationship name="FK_Employes_Rykovoditels" msdata:parent="Rykovoditels" msdata:child="Employes" msdata:parentkey="ID_Rykovoditel" msdata:childkey="ID_Rykovoditel" msprop:Generator_UserParentTable="Rykovoditels" msprop:Generator_UserChildTable="Employes" msprop:Generator_RelationVarName="relationFK_Employes_Rykovoditels" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_UserRelationName="FK_Employes_Rykovoditels" msprop:Generator_ParentPropName="RykovoditelsRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -46,41 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllEducationOrganizations.cs">
+    <Compile Include="AllGridData\AllEducationOrganizations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllEducationOrganizations.Designer.cs">
+    <Compile Include="AllGridData\AllEducationOrganizations.Designer.cs">
       <DependentUpon>AllEducationOrganizations.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllEmployees.cs">
+    <Compile Include="AllGridData\AllEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllEmployees.Designer.cs">
+    <Compile Include="AllGridData\AllEmployees.Designer.cs">
       <DependentUpon>AllEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllNominations.cs">
+    <Compile Include="AllGridData\AllNominations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllNominations.Designer.cs">
+    <Compile Include="AllGridData\AllNominations.Designer.cs">
       <DependentUpon>AllNominations.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllRykovoditels.cs">
+    <Compile Include="AllGridData\AllRykovoditels.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllRykovoditels.Designer.cs">
+    <Compile Include="AllGridData\AllRykovoditels.Designer.cs">
       <DependentUpon>AllRykovoditels.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
-    <Compile Include="EducationOrgForm.cs">
+    <Compile Include="MainForms\EducationOrgForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EducationOrgForm.Designer.cs">
+    <Compile Include="MainForms\EducationOrgForm.Designer.cs">
       <DependentUpon>EducationOrgForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeForm.cs">
+    <Compile Include="MainForms\EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeForm.Designer.cs">
+    <Compile Include="MainForms\EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LazutkinDataSet.Designer.cs">
@@ -88,48 +88,78 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LazutkinDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="MainForms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NominationForm.cs">
+    <Compile Include="MainForms\NominationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NominationForm.Designer.cs">
+    <Compile Include="MainForms\NominationForm.Designer.cs">
       <DependentUpon>NominationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RykovoditelForm.cs">
+    <Compile Include="MainForms\RykovoditelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RykovoditelForm.Designer.cs">
+    <Compile Include="MainForms\RykovoditelForm.Designer.cs">
       <DependentUpon>RykovoditelForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AllEducationOrganizations.resx">
+    <Compile Include="Sql-queryForms\AllUsersAndAnotherData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql-queryForms\AllUsersAndAnotherData.Designer.cs">
+      <DependentUpon>AllUsersAndAnotherData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sql-queryForms\CountEmployesAtRykovoditels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql-queryForms\CountEmployesAtRykovoditels.Designer.cs">
+      <DependentUpon>CountEmployesAtRykovoditels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sql-queryForms\NominationLessThreeEmployes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql-queryForms\NominationLessThreeEmployes.Designer.cs">
+      <DependentUpon>NominationLessThreeEmployes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sql-queryForms\SortByNominations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql-queryForms\SortByNominations.Designer.cs">
+      <DependentUpon>SortByNominations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sql-queryForms\SortByOrganizations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql-queryForms\SortByOrganizations.Designer.cs">
+      <DependentUpon>SortByOrganizations.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllGridData\AllEducationOrganizations.resx">
       <DependentUpon>AllEducationOrganizations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllEmployees.resx">
+    <EmbeddedResource Include="AllGridData\AllEmployees.resx">
       <DependentUpon>AllEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllNominations.resx">
+    <EmbeddedResource Include="AllGridData\AllNominations.resx">
       <DependentUpon>AllNominations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllRykovoditels.resx">
+    <EmbeddedResource Include="AllGridData\AllRykovoditels.resx">
       <DependentUpon>AllRykovoditels.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EducationOrgForm.resx">
+    <EmbeddedResource Include="MainForms\EducationOrgForm.resx">
       <DependentUpon>EducationOrgForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeForm.resx">
+    <EmbeddedResource Include="MainForms\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="MainForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NominationForm.resx">
+    <EmbeddedResource Include="MainForms\NominationForm.resx">
       <DependentUpon>NominationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -141,8 +171,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RykovoditelForm.resx">
+    <EmbeddedResource Include="MainForms\RykovoditelForm.resx">
       <DependentUpon>RykovoditelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql-queryForms\AllUsersAndAnotherData.resx">
+      <DependentUpon>AllUsersAndAnotherData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql-queryForms\CountEmployesAtRykovoditels.resx">
+      <DependentUpon>CountEmployesAtRykovoditels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql-queryForms\NominationLessThreeEmployes.resx">
+      <DependentUpon>NominationLessThreeEmployes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql-queryForms\SortByNominations.resx">
+      <DependentUpon>SortByNominations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql-queryForms\SortByOrganizations.resx">
+      <DependentUpon>SortByOrganizations.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LazutkinDataSet.xsc">
       <DependentUpon>LazutkinDataSet.xsd</DependentUpon>
@@ -171,5 +216,6 @@
   <ItemGroup>
     <Content Include=".gitignore" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
